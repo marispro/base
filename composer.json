@@ -1,0 +1,27 @@
+{
+    "name": "marispro/base",
+    "description": "Default app stack",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "MarisPro\\Base\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Maris",
+            "email": "webstarty@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MarisPro\\Base\\Providers\\BaseServiceProvider"
+            ]
+        }
+    }
+}
