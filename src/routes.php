@@ -31,6 +31,8 @@ Route::middleware('web')->group(function () {
 
                     if (!empty($data['name'])) {
                         $route->name($data['name']);
+                    }else{
+                        $route->name($data);
                     }
 
                     if (count($prefix) >= 2) {
