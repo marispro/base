@@ -34,6 +34,12 @@ Route::middleware('web')->group(function () {
                     }else{
                         $route->name($data);
                     }
+                    
+                    if (!empty($data['whereIn'])) {
+                        foreach($data['whereIn'] as $parameter => $values){
+                            $route->whereIn($parameter, $values);
+                        }
+                    }
 
                     if (count($prefix) >= 2) {
                         $route->prefix(Str::slug($prefix[0]));
