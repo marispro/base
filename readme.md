@@ -7,12 +7,13 @@ public array $routes = [
     'add' => [
         'name' => 'site.add',
         'middleware' => 'auth',
-        
     ],
+
     'edit/{site}' => [
         'name' => 'site.edit',
         'middleware' => 'auth'
     ],
+
     'login/provider/{provider}' => [
         'name' => 'login-provider',
         'middleware' => 'guest',
